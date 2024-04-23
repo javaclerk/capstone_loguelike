@@ -29,7 +29,7 @@ public class PoolManager : MonoBehaviour
             if(!item.activeSelf)
             {
                 select = item;
-                select.SetActive(false);
+                select.SetActive(true);
                 break;
             }    
         }
@@ -38,7 +38,6 @@ public class PoolManager : MonoBehaviour
             select = Instantiate(prefabs[index], transform);
             pools[index].Add(select);
         }
-        
 
         return select;
     }
