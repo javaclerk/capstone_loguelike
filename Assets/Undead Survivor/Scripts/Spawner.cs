@@ -41,7 +41,7 @@ public class SpawnData
 {
     public int spriteType;
     public float spawnTime;
-    public int helath;
+    public int health;
     public float speed;
 }
 

@@ -235,11 +235,11 @@ MonoBehaviour:
   spawnData:
   - spriteType: 0
     spawnTime: 0.7
-    helath: 10
+    health: 0
     speed: 1.5
   - spriteType: 1
     spawnTime: 0.2
-    helath: 15
+    health: 0
     speed: 2.4
 --- !u!4 &189682571
 Transform:
@@ -9185,7 +9185,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 9
+  orthographic size: 9.083333
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -18083,7 +18083,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabs:
   - {fileID: 5943726932954517753, guid: e746686416df7e548a9cdb16d202d7f9, type: 3}
-  - {fileID: 2772814548833379204, guid: d7195089413234c4daa16a720dd45068, type: 3}
 --- !u!1 &1150939302
 GameObject:
   m_ObjectHideFlags: 0

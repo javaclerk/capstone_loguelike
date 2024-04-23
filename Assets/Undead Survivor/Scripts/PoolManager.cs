@@ -29,7 +29,7 @@ public class PoolManager : MonoBehaviour
             if(!item.activeSelf)
             {
                 select = item;
-                select.SetActive(true);
+                select.SetActive(false);
                 break;
             }    
         }
