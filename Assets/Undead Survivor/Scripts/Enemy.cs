@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem.Processors;
 
 public class Enemy : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class Enemy : MonoBehaviour
     public RuntimeAnimatorController[] animCon;
     public Rigidbody2D target;
 
+    bool idle;
     bool isLive;
 
     Rigidbody2D rigid;
@@ -46,6 +48,7 @@ public class Enemy : MonoBehaviour
     {
         target = GameManager.instance.player.GetComponent<Rigidbody2D>();
         isLive = true;
+        idle = true;
         health = maxHealth;
     }
 
@@ -54,6 +57,31 @@ public class Enemy : MonoBehaviour
         anim.runtimeAnimatorController = animCon[data.spriteType];
         speed = data.speed;
         maxHealth = data.health;
+        health = data.health;
+    }
 
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (!collision.CompareTag("Bullet"))
+            return;
+
+        health -= collision.GetComponent<Bullet>().damage;
+
+        if (health > 0)
+        {
+            // .. Idle & Live, Hit Action
+        }
+
+        else
+        {
+            // Die
+            Dead();
+        }
+
+    }
+
+    void Dead()
+    {
+        gameObject.SetActive(false);
     }
 }

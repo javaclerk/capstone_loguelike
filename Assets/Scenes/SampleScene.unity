@@ -235,11 +235,11 @@ MonoBehaviour:
   spawnData:
   - spriteType: 0
     spawnTime: 0.7
-    health: 0
+    health: 10
     speed: 1.5
-  - spriteType: 0
+  - spriteType: 1
     spawnTime: 0.2
-    health: 0
+    health: 15
     speed: 2.4
 --- !u!4 &189682571
 Transform:
@@ -9185,7 +9185,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 8
+  orthographic size: 9.166667
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
